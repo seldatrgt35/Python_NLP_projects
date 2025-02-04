@@ -10,3 +10,4 @@ print ("Kelime kümesi: ",vectorizer.get_feature_names_out()) #['bahçede', 'evd
 
 #vektör temsili
 print("vektör temsili: ",X.toarray()) #[[0 1 1] [1 0 1]]    #1. cümlede evde ve kedi var, 2. cümlede bahçede ve kedi var
+# CountVectorizer sınıfı, metin belgelerini sayısal vektörlere dönüştürmek için kullanılır.
