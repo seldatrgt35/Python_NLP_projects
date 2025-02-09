@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multipay AI - Kişisel Kampanyan</title>
+    <script>
+        function useCampaign() {
+            fetch('/use_campaign', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => alert(data.message));
+        }
+    </script>
+</head>
+<body>
+    <h1>📢 Merhaba Kullanıcı {{ user.CardNo }}! 📢</h1>
+    <p><strong>Mevcut Bakiye:</strong> {{ user.CardBalance }} TL</p>
+    <p><strong>Son Harcaman:</strong> {{ user.TransactionAmount }} TL</p>
+    <p><strong>Harcama Kategorisi:</strong> {{ user.SectorName }}</p>
+    
+    <h2>🎉 Kişisel Kampanyan! 🎉</h2>
+    <p>{{ campaign }}</p>
+
+    <button onclick="useCampaign()">Kampanyayı Kullan</button>
+</body>
+</html>

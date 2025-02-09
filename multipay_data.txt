@@ -1,0 +1,4 @@
+CardTransactionId,CardNo,TransactionAmount,CardBalance,ProcessDate,SectorName
+580418763,8337,1000,1000.61,2024-04-01,Yemek
+580418764,8468,1000,1007.1,2024-04-01,Yemek
+580418765,17296,1000,1004.67,2024-04-01,Yemek

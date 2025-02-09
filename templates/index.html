@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multipay AI Kampanya Önerisi</title>
+    <script>
+        function approveCampaign() {
+            fetch('/approve_campaign', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => alert(data.message));
+        }
+    </script>
+</head>
+<body>
+    <h1>Multipay AI Destekli Kampanya Önerisi</h1>
+    <p><strong>Müşteri Numarası:</strong> {{ user.CardNo }}</p>
+    <p><strong>Mevcut Bakiye:</strong> {{ user.CardBalance }} TL</p>
+    <p><strong>Son İşlem Tutarı:</strong> {{ user.TransactionAmount }} TL</p>
+    <p><strong>İşlem Kategorisi:</strong> {{ user.SectorName }}</p>
+    
+    <h2>📢 Kampanya Önerisi</h2>
+    <p>{{ campaign }}</p>
+
+    <button onclick="approveCampaign()">Kampanyayı Onayla ve Gönder</button>
+</body>
+</html>
